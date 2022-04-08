@@ -19,8 +19,14 @@
   </div>
 
   <div class="input-container">
-    <input type="text" placeholder="# of teams">
-    <button>Generate</button>
+    <input
+    #numOfTeamsInput 
+    type="text" 
+    placeholder="# of teams"
+    (input)="onNumOfTeamsInput(numOfTeamsInput.value)"
+    [value]="numOfTeams"
+    >
+    <button (click)="generateTeams()">Generate</button>
   </div>
 
   <!-- ▼ if errMessage is true, return error message -->

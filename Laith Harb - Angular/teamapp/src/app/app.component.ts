@@ -9,10 +9,18 @@ export class AppComponent {
   newMemberName = "";
   members: string[] = [];
   errMessage = "";
+  numOfTeams: number | "" = "";
+  //an array of string arrays
+  teams: string[][] = [];
 
   // Grabs the input from the add button
   onInput(member: string){
     this.newMemberName = member;
+  }
+
+  onNumOfTeamsInput(val: string){
+    this.numOfTeams = Number(val);
+
   }
 
   // Adds the member to the array
@@ -25,5 +33,31 @@ export class AppComponent {
     this.members.push(this.newMemberName);
     this.errMessage = "";
     this.newMemberName = "";
+  }
+
+  generateTeams(){
+    if(!this.numOfTeams || this.numOfTeams <= 0){
+      return
+    }
+
+    //1:24:55
+    const allMembers = [...this.members];
+    
+    for(let i = 0; i < this.numOfTeams; i++){
+      const randomIndex = Math.floor(Math.random() * allMembers.length);
+      //Spice from an starting and ending index and let it to a new array at index 0
+      const member = allMembers.splice(randomIndex, 1)[0];
+
+      //if this exist
+      if(this.teams[i]){
+        this.teams[i].push(member);
+      } else {
+        this.teams[i] = [member];
+      }
+
+      console.log(this.teams);
+
+    }
+
   }
 }

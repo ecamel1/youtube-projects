@@ -25,5 +25,7 @@ The Modern Angular Crash Course - 2022 by Laith Harb
         Any tag/etc. can be updated!
 
 --Error Handing 1:01
-    
+
+
+numOfTeams: number | "" ==> the var can be a number type OR "" value
 
