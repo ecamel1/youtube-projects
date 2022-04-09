@@ -29,3 +29,6 @@ The Modern Angular Crash Course - 2022 by Laith Harb
 
 numOfTeams: number | "" ==> the var can be a number type OR "" value
 
+--Pipes
+https://angular.io/guide/pipes
+
