@@ -1,0 +1,26 @@
+/** 
+> Files imported with @use are modules
+> To use var/mixin in modules, you have to call them by using namespaces (default is filename)
+
+we can do @use '../custom' as custom; <-- is a namespace named 'custom'
+but for each var from custom we have to do custom.$primary, custom.$secondary, etc.
+Using the * allow us to use the vars without typing custom each time
+*/
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.menu {
+    @include gradient;
+
+    li {
+        padding: 0 0.07rem;
+
+        a{
+            color: $white !important;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+    }
+
+    
+}
