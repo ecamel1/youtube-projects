@@ -6,3 +6,6 @@
 ---
 > Mongoose is a object data modeling (ODM) library, it wraps mongodb to allow additonal funtions, declare models and schemas, etc.
 > Mongoose adds an extra layer of structre that mongodb doesnt offer
+>npx -> node package execute
+
+>npx create-react-app nameHere
