@@ -4,6 +4,9 @@
  */
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
+// Pages & Componets 
+import Home from "./pages/Home";
+
 function App() {
   return (
     <div className="App">
@@ -12,7 +15,7 @@ function App() {
         <Routes>
           <Route 
             path="/"
-            element={}
+            element={<Home />}
           />
         </Routes>
       </div>
