@@ -8,6 +8,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // StrictMode gives us warnings during development
   <React.StrictMode>
-    <App />
+    <App /> {/* This is the App Component */}
   </React.StrictMode>
 );
