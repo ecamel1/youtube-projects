@@ -37,3 +37,6 @@ For smaller projects use the index.css like a global stylesheet
 ## Inline css in JSX
 Use camel case: background-color: '#f1356d'
 becomes backgroundColor: '#f1356d'
+
+## State
+The state of a component is how the data in the component is at that point of time
