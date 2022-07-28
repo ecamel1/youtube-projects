@@ -49,3 +49,6 @@ Can be data (str, int, arr, function, etc.)
 {/* Filter the resuable component's prop */}
 <BlogList blogs={blogs.filter((blogs) => blogs.author === "Me")} title="Blogs By the author of ME" />
 ```
+## Hooks
+useState - Allows the change of state on data
+useEffect - Runs code on every render

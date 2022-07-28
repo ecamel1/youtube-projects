@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import BlogList from './BlogList';
 
 function Home() {
@@ -8,6 +8,8 @@ function Home() {
         {title: "Learning Material", body: "List of Free Materials ....", author: "Them", id: 3}
     ]);
 
+    const [name, setName] = useState("Marioin");
+
     //Uncaught TypeError: handleDelete is not a function
     const handleDelete = (id) => {
         // blogs.filter does NOT change the original data.
@@ -15,11 +17,17 @@ function Home() {
         setBlogs(newBlogs);
     }
 
+    useEffect(() => {
+        console.log("useEffect Runs");
+        console.log(name);
+    }, [name]);
+
     return ( 
         <div className="Home">   
             {/* Prop Example Below */}
             <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>
-
+            <button onClick={(() => setName("Luigi"))}>Change Name</button>
+            <p>{ name }</p>
         </div>
     );
 }
