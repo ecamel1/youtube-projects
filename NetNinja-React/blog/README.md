@@ -40,3 +40,6 @@ becomes backgroundColor: '#f1356d'
 
 ## State
 The state of a component is how the data in the component is at that point of time
+
+## Props
+Props is a way to pass data from one component to another
