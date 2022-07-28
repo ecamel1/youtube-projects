@@ -43,3 +43,9 @@ The state of a component is how the data in the component is at that point of ti
 
 ## Props
 Props is a way to pass data from one component to another
+Can be data (str, int, arr, function, etc.)
+
+```
+{/* Filter the resuable component's prop */}
+<BlogList blogs={blogs.filter((blogs) => blogs.author === "Me")} title="Blogs By the author of ME" />
+```

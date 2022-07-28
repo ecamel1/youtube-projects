@@ -8,10 +8,18 @@ function Home() {
         {title: "Learning Material", body: "List of Free Materials ....", author: "Them", id: 3}
     ]);
 
+    //Uncaught TypeError: handleDelete is not a function
+    const handleDelete = (id) => {
+        // blogs.filter does NOT change the original data.
+        const newBlogs = blogs.filter(blog => blog.id !== id);
+        setBlogs(newBlogs);
+    }
+
     return ( 
         <div className="Home">   
             {/* Prop Example Below */}
-            <BlogList blogs={blogs} title="All Blogs" />
+            <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>
+
         </div>
     );
 }
