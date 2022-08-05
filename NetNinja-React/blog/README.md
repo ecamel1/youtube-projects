@@ -52,3 +52,6 @@ Can be data (str, int, arr, function, etc.)
 ## Hooks
 useState - Allows the change of state on data
 useEffect - Runs code on every render
+
+## Link tag from react-router-dom
+React allows the content of the website to be rendered browerside (after intial sever loading #21)

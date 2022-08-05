@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 // This is a stateless functional component (sfc)
 //It doesn't have to be an arrow function
 const Navbar = () => {
@@ -5,12 +7,13 @@ const Navbar = () => {
         <nav className="navbar">
             <h1>The Dogo Blog</h1>
             <div className="links">
-                <a href="/">Home</a>
-                <a href="/create" style={{
+                {/* The Link from  */}
+                <Link to="/">Home</Link>
+                <Link to="/create" style={{
                     color: "white",
                     backgroundColor: '#f1356d',
                     borderRadius: '8px'
-                }}>New Blog</a>
+                }}>New Blog</Link>
             </div>
         </nav>
     );
